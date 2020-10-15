@@ -10,12 +10,12 @@ import java.sql.Statement;
  */
 public class TiendaApp {
     
-    public static void main(String[] args) throws ClassNotFoundException, SQLException{
+    public static void main(String[] args) {
         
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        String UrlConexion ="jdbc:sqlserver://ENYAOFICIAL\\MMSQLSERVER:1433;databaseName=TiendaOnline;user=sa;password=12345;";
-        Connection con= DriverManager.getConnection(UrlConexion);
+<<<<<<< Updated upstream
+=======
+
         
-        System.out.println("Conexion establecida");
+>>>>>>> Stashed changes
     }
 }
