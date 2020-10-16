@@ -27,92 +27,17 @@ public class carrito_Domicilio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_CP = new javax.swing.JLabel();
-        jTextField_cp = new javax.swing.JTextField();
-        jLabel_estado = new javax.swing.JLabel();
-        jTextField_estado = new javax.swing.JTextField();
-        jLabel_ciudad = new javax.swing.JLabel();
-        jTextField_ciudad = new javax.swing.JTextField();
-        jLabel_Calle = new javax.swing.JLabel();
-        jTextField_calle = new javax.swing.JTextField();
-        jLabel_Calle1 = new javax.swing.JLabel();
-        jTextField_NoExt = new javax.swing.JTextField();
-        jLabel_CP1 = new javax.swing.JLabel();
-        jTextField_pais = new javax.swing.JTextField();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(92, 103, 125));
-
-        jLabel_CP.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel_CP.setText("CP");
-
-        jLabel_estado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel_estado.setText("Estado");
-
-        jLabel_ciudad.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel_ciudad.setText("Ciudad");
-
-        jLabel_Calle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel_Calle.setText("Calle");
-
-        jLabel_Calle1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel_Calle1.setText("N. exterior");
-
-        jLabel_CP1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel_CP1.setText("País");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel_CP1)
-                        .addComponent(jLabel_estado)
-                        .addComponent(jLabel_Calle1)
-                        .addComponent(jLabel_Calle)
-                        .addComponent(jLabel_CP)
-                        .addComponent(jTextField_estado)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel_ciudad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextField_pais, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField_NoExt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-                            .addComponent(jTextField_cp, javax.swing.GroupLayout.Alignment.LEADING)))
-                    .addComponent(jTextField_calle, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel_Calle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField_calle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_Calle1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField_NoExt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel_CP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField_cp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel_CP1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField_pais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel_ciudad)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_estado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField_estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -154,17 +79,5 @@ public class carrito_Domicilio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel_CP;
-    private javax.swing.JLabel jLabel_CP1;
-    private javax.swing.JLabel jLabel_Calle;
-    private javax.swing.JLabel jLabel_Calle1;
-    private javax.swing.JLabel jLabel_ciudad;
-    private javax.swing.JLabel jLabel_estado;
-    private javax.swing.JTextField jTextField_NoExt;
-    private javax.swing.JTextField jTextField_calle;
-    private javax.swing.JTextField jTextField_ciudad;
-    private javax.swing.JTextField jTextField_cp;
-    private javax.swing.JTextField jTextField_estado;
-    private javax.swing.JTextField jTextField_pais;
     // End of variables declaration//GEN-END:variables
 }
