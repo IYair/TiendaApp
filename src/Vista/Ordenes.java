@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Eduardo
@@ -34,6 +36,7 @@ public class Ordenes extends javax.swing.JFrame {
         btn_modificar = new javax.swing.JButton();
         jPanel_banner = new javax.swing.JPanel();
         jLabel_admi_ordenes = new javax.swing.JLabel();
+        btn_home = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,10 +68,22 @@ public class Ordenes extends javax.swing.JFrame {
         btn_modificar.setPreferredSize(new java.awt.Dimension(71, 23));
 
         jPanel_banner.setBackground(new java.awt.Color(128, 128, 128));
+        jPanel_banner.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel_bannerMouseClicked(evt);
+            }
+        });
 
         jLabel_admi_ordenes.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
         jLabel_admi_ordenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/ordenes.png"))); // NOI18N
         jLabel_admi_ordenes.setText("Administración de Ordenes");
+
+        btn_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/casa.png"))); // NOI18N
+        btn_home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_homeMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_bannerLayout = new javax.swing.GroupLayout(jPanel_banner);
         jPanel_banner.setLayout(jPanel_bannerLayout);
@@ -78,11 +93,16 @@ public class Ordenes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel_admi_ordenes)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btn_home))
         );
         jPanel_bannerLayout.setVerticalGroup(
             jPanel_bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_bannerLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(8, 8, 8)
+                .addComponent(btn_home)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel_admi_ordenes)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -94,7 +114,7 @@ public class Ordenes extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                     .addComponent(btn_modificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_insertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -120,6 +140,23 @@ public class Ordenes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel_bannerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_bannerMouseClicked
+
+
+    }//GEN-LAST:event_jPanel_bannerMouseClicked
+
+    private void btn_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseClicked
+F_Administrador home = new F_Administrador();
+        
+        home.setVisible(true);
+        home.pack();
+        home.setLocationRelativeTo(null);
+        home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+
+    }//GEN-LAST:event_btn_homeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -158,6 +195,7 @@ public class Ordenes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_eliminar;
+    private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_insertar;
     private javax.swing.JButton btn_modificar;
     private javax.swing.JLabel jLabel_admi_ordenes;
