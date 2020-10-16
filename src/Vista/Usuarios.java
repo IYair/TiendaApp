@@ -41,6 +41,7 @@ public class Usuarios extends javax.swing.JFrame {
         btn_modificar = new javax.swing.JButton();
         jPanel_banner = new javax.swing.JPanel();
         jLabel_admi_usuarios = new javax.swing.JLabel();
+        btn_home = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(192, 192, 192));
@@ -83,6 +84,13 @@ public class Usuarios extends javax.swing.JFrame {
         jLabel_admi_usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/agregar-usuario.png"))); // NOI18N
         jLabel_admi_usuarios.setText("Administración de Usuarios");
 
+        btn_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/casa.png"))); // NOI18N
+        btn_home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_homeMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_bannerLayout = new javax.swing.GroupLayout(jPanel_banner);
         jPanel_banner.setLayout(jPanel_bannerLayout);
         jPanel_bannerLayout.setHorizontalGroup(
@@ -91,11 +99,17 @@ public class Usuarios extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel_admi_usuarios)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_home)
+                .addContainerGap())
         );
         jPanel_bannerLayout.setVerticalGroup(
             jPanel_bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_bannerLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(8, 8, 8)
+                .addComponent(btn_home)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel_admi_usuarios)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -128,7 +142,7 @@ public class Usuarios extends javax.swing.JFrame {
                         .addComponent(btn_eliminar)
                         .addGap(38, 38, 38)
                         .addComponent(btn_modificar)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -148,6 +162,19 @@ public class Usuarios extends javax.swing.JFrame {
     private void btn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_insertarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_insertarActionPerformed
+
+    private void btn_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseClicked
+        F_Administrador home = new F_Administrador();
+        
+        
+        home.setVisible(true);
+        home.pack();
+        home.setLocationRelativeTo(null);
+        home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+
+    }//GEN-LAST:event_btn_homeMouseClicked
  //ESTO SE USARÁ EN EL APARTADO DEL CONTROLADOR
 
     
@@ -185,6 +212,7 @@ public class Usuarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_eliminar;
+    private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_insertar;
     private javax.swing.JButton btn_modificar;
     private javax.swing.JLabel jLabel_admi_usuarios;
