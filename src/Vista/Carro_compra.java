@@ -31,6 +31,9 @@ public class Carro_compra extends javax.swing.JFrame {
         banner_carrito = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable_carrito_compra = new javax.swing.JTable();
+        btn_eliminar = new javax.swing.JButton();
+        btn_modificar = new javax.swing.JButton();
+        btn_continuar_compra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,12 +66,29 @@ public class Carro_compra extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable_carrito_compra);
 
+        btn_eliminar.setBackground(new java.awt.Color(208, 0, 0));
+        btn_eliminar.setText("Eliminar");
+
+        btn_modificar.setBackground(new java.awt.Color(144, 190, 109));
+        btn_modificar.setText("Modificar");
+
+        btn_continuar_compra.setBackground(new java.awt.Color(33, 158, 188));
+        btn_continuar_compra.setText("Continuar Compra");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(banner_carrito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(btn_eliminar)
+                .addGap(47, 47, 47)
+                .addComponent(btn_modificar)
+                .addGap(49, 49, 49)
+                .addComponent(btn_continuar_compra)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,7 +96,12 @@ public class Carro_compra extends javax.swing.JFrame {
                 .addComponent(banner_carrito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(288, 288, 288))
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_eliminar)
+                    .addComponent(btn_modificar)
+                    .addComponent(btn_continuar_compra))
+                .addGap(201, 201, 201))
         );
 
         pack();
@@ -119,6 +144,9 @@ public class Carro_compra extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel banner_carrito;
+    private javax.swing.JButton btn_continuar_compra;
+    private javax.swing.JButton btn_eliminar;
+    private javax.swing.JButton btn_modificar;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable_carrito_compra;
     // End of variables declaration//GEN-END:variables
