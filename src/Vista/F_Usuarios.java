@@ -17,6 +17,8 @@ public class F_Usuarios extends javax.swing.JFrame {
     public F_Usuarios() {
         initComponents();this.setExtendedState(MAXIMIZED_BOTH); // hace full screen
         this.setLocationRelativeTo(null);
+        btn_carrito_compras.setBorder(null);
+        
         
     }
 
@@ -31,6 +33,7 @@ public class F_Usuarios extends javax.swing.JFrame {
 
         jPanel_banner = new javax.swing.JPanel();
         jLabel_productos = new javax.swing.JLabel();
+        btn_carrito_compras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,6 +43,16 @@ public class F_Usuarios extends javax.swing.JFrame {
         jLabel_productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/mercado.png"))); // NOI18N
         jLabel_productos.setText("Productos");
 
+        btn_carrito_compras.setBackground(new java.awt.Color(185, 226, 140));
+        btn_carrito_compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/carro-de-la-compra.png"))); // NOI18N
+        btn_carrito_compras.setBorder(null);
+        btn_carrito_compras.setBorderPainted(false);
+        btn_carrito_compras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_carrito_comprasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_bannerLayout = new javax.swing.GroupLayout(jPanel_banner);
         jPanel_banner.setLayout(jPanel_bannerLayout);
         jPanel_bannerLayout.setHorizontalGroup(
@@ -47,14 +60,20 @@ public class F_Usuarios extends javax.swing.JFrame {
             .addGroup(jPanel_bannerLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel_productos)
-                .addContainerGap(518, Short.MAX_VALUE))
+                .addContainerGap(474, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_carrito_compras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel_bannerLayout.setVerticalGroup(
             jPanel_bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(jLabel_productos)
-                .addGap(41, 41, 41))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_carrito_compras)
+                .addGap(12, 12, 12))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -67,11 +86,15 @@ public class F_Usuarios extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 425, Short.MAX_VALUE))
+                .addGap(0, 466, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_carrito_comprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_carrito_comprasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_carrito_comprasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,6 +132,7 @@ public class F_Usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_carrito_compras;
     private javax.swing.JLabel jLabel_productos;
     private javax.swing.JPanel jPanel_banner;
     // End of variables declaration//GEN-END:variables
