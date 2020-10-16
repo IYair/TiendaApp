@@ -37,6 +37,8 @@ public class carrito_Domicilio extends javax.swing.JFrame {
         jTextField_estado = new javax.swing.JTextField();
         jLabel_Ciudad = new javax.swing.JLabel();
         jTextField_ciudad = new javax.swing.JTextField();
+        btn_guardar = new javax.swing.JButton();
+        btn_cancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(253, 231, 76));
@@ -62,6 +64,12 @@ public class carrito_Domicilio extends javax.swing.JFrame {
         jLabel_Ciudad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel_Ciudad.setText("Ciudad");
 
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_guardar.png"))); // NOI18N
+        btn_guardar.setText("Guardar");
+
+        btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
+        btn_cancelar.setText("Cancelar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,7 +89,13 @@ public class carrito_Domicilio extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jTextField_estado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                         .addComponent(jTextField_ciudad, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_guardar)
+                .addGap(39, 39, 39)
+                .addComponent(btn_cancelar)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +120,11 @@ public class carrito_Domicilio extends javax.swing.JFrame {
                 .addComponent(jLabel_estado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField_estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_guardar)
+                    .addComponent(btn_cancelar))
+                .addContainerGap())
         );
 
         pack();
@@ -152,6 +170,8 @@ public class carrito_Domicilio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cancelar;
+    private javax.swing.JButton btn_guardar;
     private javax.swing.JLabel jLabel_CP;
     private javax.swing.JLabel jLabel_Ciudad;
     private javax.swing.JLabel jLabel_calle;
