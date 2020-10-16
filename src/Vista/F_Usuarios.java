@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Eduardo
@@ -47,6 +49,11 @@ public class F_Usuarios extends javax.swing.JFrame {
         btn_carrito_compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/carro-de-la-compra.png"))); // NOI18N
         btn_carrito_compras.setBorder(null);
         btn_carrito_compras.setBorderPainted(false);
+        btn_carrito_compras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_carrito_comprasMouseClicked(evt);
+            }
+        });
         btn_carrito_compras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_carrito_comprasActionPerformed(evt);
@@ -95,6 +102,16 @@ public class F_Usuarios extends javax.swing.JFrame {
     private void btn_carrito_comprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_carrito_comprasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_carrito_comprasActionPerformed
+
+    private void btn_carrito_comprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_carrito_comprasMouseClicked
+        Carro_compra carro = new Carro_compra();
+        carro.setVisible(true);
+        carro.pack();
+        carro.setLocationRelativeTo(null);
+        carro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+    }//GEN-LAST:event_btn_carrito_comprasMouseClicked
 
     /**
      * @param args the command line arguments
