@@ -33,7 +33,7 @@ public class Carro_compra extends javax.swing.JFrame {
         jTable_carrito_compra = new javax.swing.JTable();
         btn_eliminar = new javax.swing.JButton();
         btn_modificar = new javax.swing.JButton();
-        btn_continuar_compra = new javax.swing.JButton();
+        btn_pagar = new javax.swing.JButton();
         jLabel_Total_compra = new javax.swing.JLabel();
         jTextField_total_compra = new javax.swing.JTextField();
 
@@ -74,8 +74,8 @@ public class Carro_compra extends javax.swing.JFrame {
         btn_modificar.setBackground(new java.awt.Color(144, 190, 109));
         btn_modificar.setText("Modificar");
 
-        btn_continuar_compra.setBackground(new java.awt.Color(33, 158, 188));
-        btn_continuar_compra.setText("Continuar Compra");
+        btn_pagar.setBackground(new java.awt.Color(33, 158, 188));
+        btn_pagar.setText("Pagar");
 
         jLabel_Total_compra.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jLabel_Total_compra.setText("TOTAL COMPRA:");
@@ -94,7 +94,7 @@ public class Carro_compra extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addComponent(btn_modificar)
                 .addGap(49, 49, 49)
-                .addComponent(btn_continuar_compra)
+                .addComponent(btn_pagar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -113,7 +113,7 @@ public class Carro_compra extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_eliminar)
                     .addComponent(btn_modificar)
-                    .addComponent(btn_continuar_compra))
+                    .addComponent(btn_pagar))
                 .addGap(146, 146, 146)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField_total_compra)
@@ -161,9 +161,9 @@ public class Carro_compra extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel banner_carrito;
-    private javax.swing.JButton btn_continuar_compra;
     private javax.swing.JButton btn_eliminar;
     private javax.swing.JButton btn_modificar;
+    private javax.swing.JButton btn_pagar;
     private javax.swing.JLabel jLabel_Total_compra;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable_carrito_compra;
