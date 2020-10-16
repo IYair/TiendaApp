@@ -29,6 +29,8 @@ public class metodosPago extends javax.swing.JFrame {
 
         banner = new javax.swing.JPanel();
         jLabel_metodoPago = new javax.swing.JLabel();
+        jButton_tarjeta = new javax.swing.JButton();
+        jButton_efectivo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +47,7 @@ public class metodosPago extends javax.swing.JFrame {
             .addGroup(bannerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel_metodoPago)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         bannerLayout.setVerticalGroup(
             bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -55,17 +57,33 @@ public class metodosPago extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        jButton_tarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/pago.png"))); // NOI18N
+        jButton_tarjeta.setText("Tarjeta");
+
+        jButton_efectivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/dinero.png"))); // NOI18N
+        jButton_efectivo.setText("Efectivo");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(banner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(159, Short.MAX_VALUE)
+                .addComponent(jButton_tarjeta)
+                .addGap(143, 143, 143)
+                .addComponent(jButton_efectivo)
+                .addGap(155, 155, 155))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 256, Short.MAX_VALUE))
+                .addGap(95, 95, 95)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_tarjeta)
+                    .addComponent(jButton_efectivo))
+                .addGap(0, 128, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,6 +126,8 @@ public class metodosPago extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel banner;
+    private javax.swing.JButton jButton_efectivo;
+    private javax.swing.JButton jButton_tarjeta;
     private javax.swing.JLabel jLabel_metodoPago;
     // End of variables declaration//GEN-END:variables
 }
