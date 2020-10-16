@@ -34,6 +34,8 @@ public class Carro_compra extends javax.swing.JFrame {
         btn_eliminar = new javax.swing.JButton();
         btn_modificar = new javax.swing.JButton();
         btn_continuar_compra = new javax.swing.JButton();
+        jLabel_Total_compra = new javax.swing.JLabel();
+        jTextField_total_compra = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,6 +77,11 @@ public class Carro_compra extends javax.swing.JFrame {
         btn_continuar_compra.setBackground(new java.awt.Color(33, 158, 188));
         btn_continuar_compra.setText("Continuar Compra");
 
+        jLabel_Total_compra.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel_Total_compra.setText("TOTAL COMPRA:");
+
+        jTextField_total_compra.setEnabled(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -89,6 +96,12 @@ public class Carro_compra extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(btn_continuar_compra)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel_Total_compra)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField_total_compra, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,12 +109,16 @@ public class Carro_compra extends javax.swing.JFrame {
                 .addComponent(banner_carrito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addGap(79, 79, 79)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_eliminar)
                     .addComponent(btn_modificar)
                     .addComponent(btn_continuar_compra))
-                .addGap(201, 201, 201))
+                .addGap(146, 146, 146)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField_total_compra)
+                    .addComponent(jLabel_Total_compra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -147,7 +164,9 @@ public class Carro_compra extends javax.swing.JFrame {
     private javax.swing.JButton btn_continuar_compra;
     private javax.swing.JButton btn_eliminar;
     private javax.swing.JButton btn_modificar;
+    private javax.swing.JLabel jLabel_Total_compra;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable_carrito_compra;
+    private javax.swing.JTextField jTextField_total_compra;
     // End of variables declaration//GEN-END:variables
 }
