@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Eduardo
@@ -76,6 +78,11 @@ public class Carro_compra extends javax.swing.JFrame {
 
         btn_pagar.setBackground(new java.awt.Color(33, 158, 188));
         btn_pagar.setText("Pagar");
+        btn_pagar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_pagarMouseClicked(evt);
+            }
+        });
 
         jLabel_Total_compra.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jLabel_Total_compra.setText("TOTAL COMPRA:");
@@ -123,6 +130,17 @@ public class Carro_compra extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_pagarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_pagarMouseClicked
+        metodosPago metodo= new metodosPago();
+        metodo.setVisible(true);
+        metodo.pack();
+        metodo.setLocationRelativeTo(null);
+        metodo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+
+    }//GEN-LAST:event_btn_pagarMouseClicked
 
     /**
      * @param args the command line arguments
