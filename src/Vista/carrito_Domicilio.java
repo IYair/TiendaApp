@@ -69,6 +69,11 @@ public class carrito_Domicilio extends javax.swing.JFrame {
 
         btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
         btn_cancelar.setText("Cancelar");
+        btn_cancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_cancelarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,6 +138,11 @@ public class carrito_Domicilio extends javax.swing.JFrame {
     private void jTextField_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_CPActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_CPActionPerformed
+
+    private void btn_cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_cancelarMouseClicked
+        this.dispose();
+
+    }//GEN-LAST:event_btn_cancelarMouseClicked
 
     /**
      * @param args the command line arguments
