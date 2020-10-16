@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Eduardo
@@ -59,9 +61,19 @@ public class metodosPago extends javax.swing.JFrame {
 
         jButton_tarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/pago.png"))); // NOI18N
         jButton_tarjeta.setText("Tarjeta");
+        jButton_tarjeta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_tarjetaMouseClicked(evt);
+            }
+        });
 
         jButton_efectivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/dinero.png"))); // NOI18N
         jButton_efectivo.setText("Efectivo");
+        jButton_efectivo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_efectivoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,6 +100,24 @@ public class metodosPago extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_tarjetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_tarjetaMouseClicked
+         carrito_Domicilio carrito = new carrito_Domicilio();
+        carrito.setVisible(true);
+        carrito.pack();
+        carrito.setLocationRelativeTo(null);
+       //carrito.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       //this.dispose();
+    }//GEN-LAST:event_jButton_tarjetaMouseClicked
+
+    private void jButton_efectivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_efectivoMouseClicked
+
+        carrito_Domicilio carrito = new carrito_Domicilio();
+        carrito.setVisible(true);
+        carrito.pack();
+        carrito.setLocationRelativeTo(null);
+
+    }//GEN-LAST:event_jButton_efectivoMouseClicked
 
     /**
      * @param args the command line arguments
