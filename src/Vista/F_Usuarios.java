@@ -36,6 +36,7 @@ public class F_Usuarios extends javax.swing.JFrame {
         jPanel_banner = new javax.swing.JPanel();
         jLabel_productos = new javax.swing.JLabel();
         btn_carrito_compras = new javax.swing.JButton();
+        jPanel_productos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,17 +84,30 @@ public class F_Usuarios extends javax.swing.JFrame {
                 .addGap(12, 12, 12))
         );
 
+        javax.swing.GroupLayout jPanel_productosLayout = new javax.swing.GroupLayout(jPanel_productos);
+        jPanel_productos.setLayout(jPanel_productosLayout);
+        jPanel_productosLayout.setHorizontalGroup(
+            jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel_productosLayout.setVerticalGroup(
+            jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 460, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel_banner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel_productos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 466, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel_productos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -152,5 +166,6 @@ public class F_Usuarios extends javax.swing.JFrame {
     private javax.swing.JButton btn_carrito_compras;
     private javax.swing.JLabel jLabel_productos;
     private javax.swing.JPanel jPanel_banner;
+    private javax.swing.JPanel jPanel_productos;
     // End of variables declaration//GEN-END:variables
 }
