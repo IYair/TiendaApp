@@ -15,7 +15,9 @@ public class F_Usuarios extends javax.swing.JFrame {
      * Creates new form F_Usuarios
      */
     public F_Usuarios() {
-        initComponents();
+        initComponents();this.setExtendedState(MAXIMIZED_BOTH); // hace full screen
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
