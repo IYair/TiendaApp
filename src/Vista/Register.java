@@ -53,20 +53,27 @@ public class Register extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(500, 630));
         jPanel1.setMinimumSize(new java.awt.Dimension(500, 630));
 
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
         jLabel1.setText("Nombre");
 
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jLabel2.setText("Apellido");
 
+        jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Correo");
 
+        jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("Contraseña");
 
+        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
         jLabel5.setText("Fecha de nacimiento");
 
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_guardar.png"))); // NOI18N
         jButton1.setText("Registrarse");
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
         jButton2.setText("Cancelar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -105,9 +112,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(153, 153, 153)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -128,7 +133,7 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
