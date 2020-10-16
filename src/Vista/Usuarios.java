@@ -67,6 +67,11 @@ public class Usuarios extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         btn_insertar.setText("Insertar");
+        btn_insertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_insertarActionPerformed(evt);
+            }
+        });
 
         btn_eliminar.setText("Eliminar");
 
@@ -139,6 +144,10 @@ public class Usuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_insertarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_insertarActionPerformed
  //ESTO SE USARÁ EN EL APARTADO DEL CONTROLADOR
 
     
