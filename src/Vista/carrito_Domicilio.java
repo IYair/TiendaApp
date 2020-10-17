@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Eduardo
@@ -66,6 +68,11 @@ public class carrito_Domicilio extends javax.swing.JFrame {
 
         btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_guardar.png"))); // NOI18N
         btn_guardar.setText("Guardar");
+        btn_guardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_guardarMouseClicked(evt);
+            }
+        });
 
         btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
         btn_cancelar.setText("Cancelar");
@@ -143,6 +150,17 @@ public class carrito_Domicilio extends javax.swing.JFrame {
         this.dispose();
 
     }//GEN-LAST:event_btn_cancelarMouseClicked
+
+    private void btn_guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_guardarMouseClicked
+         metodosPago metodo= new metodosPago();
+        metodo.setVisible(true);
+        metodo.pack();
+        metodo.setLocationRelativeTo(null);
+       // metodo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+
+    }//GEN-LAST:event_btn_guardarMouseClicked
 
     /**
      * @param args the command line arguments
