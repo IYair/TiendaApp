@@ -5,6 +5,13 @@
  */
 package Controlador;
 
+import Modelo.CRUD_Usuario;
+import Modelo.Usuario;
+import Vista.Register;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Final
