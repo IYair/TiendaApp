@@ -40,6 +40,9 @@ public class ControladorUsuario implements ActionListener{
         modeloUsuario.setCorreo(vistaUsuario.jTextCorreo.getText());
         modeloUsuario.setDateborn(vistaUsuario.jTextDateborn.getText());
     
-    private Register vistaUsuario;
-    private CRUD_Usuario modeloCRUDUsuario;
-    private Usuario modeloUsuario;
+        if (modeloCRUDUsuario.RegistrarUsuario(modeloUsuario)) {
+            JOptionPane.showMessageDialog(null,"Usuario Creado Correctamente");
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Error al crear Usuario");
+        }
