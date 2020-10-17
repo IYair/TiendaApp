@@ -46,6 +46,9 @@ public class F_Usuarios extends javax.swing.JFrame {
         jLabel_precio1 = new javax.swing.JLabel();
         jLabel_precio2 = new javax.swing.JLabel();
         jLabel_precio3 = new javax.swing.JLabel();
+        jButton_agregarCarrito1 = new javax.swing.JButton();
+        jButton_agregarCarrito2 = new javax.swing.JButton();
+        jButton_agregarCarrito3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,6 +120,12 @@ public class F_Usuarios extends javax.swing.JFrame {
         jLabel_precio3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel_precio3.setText("$ 120 mxn");
 
+        jButton_agregarCarrito1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_agregarcarrito.png"))); // NOI18N
+
+        jButton_agregarCarrito2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_agregarcarrito.png"))); // NOI18N
+
+        jButton_agregarCarrito3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_agregarcarrito.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel_productosLayout = new javax.swing.GroupLayout(jPanel_productos);
         jPanel_productos.setLayout(jPanel_productosLayout);
         jPanel_productosLayout.setHorizontalGroup(
@@ -129,8 +138,9 @@ public class F_Usuarios extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_miel_osito)
-                            .addComponent(jLabel_precio2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel_precio2)
+                            .addComponent(jButton_agregarCarrito2))
+                        .addContainerGap(590, Short.MAX_VALUE))
                     .addGroup(jPanel_productosLayout.createSequentialGroup()
                         .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel_productosLayout.createSequentialGroup()
@@ -138,14 +148,16 @@ public class F_Usuarios extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel_miel1)
-                                    .addComponent(jLabel_precio1)))
+                                    .addComponent(jLabel_precio1)
+                                    .addComponent(jButton_agregarCarrito1)))
                             .addGroup(jPanel_productosLayout.createSequentialGroup()
                                 .addComponent(jLabel_miel3)
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel_miel_botella)
-                                    .addComponent(jLabel_precio3))))
-                        .addGap(0, 575, Short.MAX_VALUE))))
+                                    .addComponent(jLabel_precio3)
+                                    .addComponent(jButton_agregarCarrito3))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel_productosLayout.setVerticalGroup(
             jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,21 +168,27 @@ public class F_Usuarios extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel_miel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel_precio1)))
+                        .addComponent(jLabel_precio1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton_agregarCarrito1)))
                 .addGap(60, 60, 60)
                 .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_miel2)
                     .addGroup(jPanel_productosLayout.createSequentialGroup()
                         .addComponent(jLabel_miel_osito)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel_precio2)))
+                        .addComponent(jLabel_precio2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton_agregarCarrito2)))
                 .addGap(65, 65, 65)
                 .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_miel3)
                     .addGroup(jPanel_productosLayout.createSequentialGroup()
                         .addComponent(jLabel_miel_botella)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel_precio3)))
+                        .addComponent(jLabel_precio3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton_agregarCarrito3)))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
 
@@ -244,6 +262,9 @@ public class F_Usuarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_carrito_compras;
+    private javax.swing.JButton jButton_agregarCarrito1;
+    private javax.swing.JButton jButton_agregarCarrito2;
+    private javax.swing.JButton jButton_agregarCarrito3;
     private javax.swing.JLabel jLabel_miel1;
     private javax.swing.JLabel jLabel_miel2;
     private javax.swing.JLabel jLabel_miel3;
