@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author Final
  */
-public class ControladorUsuario {
+public class ControladorUsuario implements ActionListener{
     
     private Usuario modeloUsuario;
     private CRUD_Usuario modeloCRUDUsuario;
