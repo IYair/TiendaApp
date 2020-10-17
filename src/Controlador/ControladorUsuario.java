@@ -27,7 +27,11 @@ public class ControladorUsuario implements ActionListener{
      this.vistaUsuario=formularioUsuario;
      this.modeloCRUDUsuario=crudusuario;
      this.vistaUsuario.jButtonRegistarse.addActionListener(this);
-}
+    }
+    public void iniciar(){
+        vistaUsuario.setTitle("Crear Usuario");
+        vistaUsuario.setLocationRelativeTo(null);
+    }
     
     private Register vistaUsuario;
     private CRUD_Usuario modeloCRUDUsuario;
