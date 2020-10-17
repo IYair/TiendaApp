@@ -78,6 +78,7 @@
         <Property name="text" type="java.lang.String" value="Productos"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ProductosMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ProductosActionPerformed"/>
       </Events>
     </Component>
@@ -89,6 +90,7 @@
         <Property name="text" type="java.lang.String" value="Usuarios"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_UsuariosMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_UsuariosActionPerformed"/>
       </Events>
     </Component>
@@ -226,6 +228,7 @@
         <Property name="text" type="java.lang.String" value="Ordenes"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_ordenesMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ordenesActionPerformed"/>
       </Events>
     </Component>
@@ -237,6 +240,7 @@
         <Property name="text" type="java.lang.String" value="Domicilio"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_domicilioMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_domicilioActionPerformed"/>
       </Events>
     </Component>

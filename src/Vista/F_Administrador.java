@@ -29,7 +29,8 @@ public class F_Administrador extends javax.swing.JFrame {
     
     public F_Administrador() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH); // hace full screen 
+        this.setExtendedState(MAXIMIZED_BOTH); // hace full screen
+        this.setLocationRelativeTo(null);
         
     }
     /*
@@ -132,6 +133,11 @@ public class F_Administrador extends javax.swing.JFrame {
 
         btn_Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_productos.png"))); // NOI18N
         btn_Productos.setText("Productos");
+        btn_Productos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ProductosMouseClicked(evt);
+            }
+        });
         btn_Productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_ProductosActionPerformed(evt);
@@ -140,6 +146,11 @@ public class F_Administrador extends javax.swing.JFrame {
 
         btn_Usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_usuarios.png"))); // NOI18N
         btn_Usuarios.setText("Usuarios");
+        btn_Usuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_UsuariosMouseClicked(evt);
+            }
+        });
         btn_Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_UsuariosActionPerformed(evt);
@@ -209,6 +220,11 @@ public class F_Administrador extends javax.swing.JFrame {
 
         btn_ordenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_ventas.png"))); // NOI18N
         btn_ordenes.setText("Ordenes");
+        btn_ordenes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ordenesMouseClicked(evt);
+            }
+        });
         btn_ordenes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_ordenesActionPerformed(evt);
@@ -217,6 +233,11 @@ public class F_Administrador extends javax.swing.JFrame {
 
         btn_domicilio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/domicilio.png"))); // NOI18N
         btn_domicilio.setText("Domicilio");
+        btn_domicilio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_domicilioMouseClicked(evt);
+            }
+        });
         btn_domicilio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_domicilioActionPerformed(evt);
@@ -282,6 +303,49 @@ public class F_Administrador extends javax.swing.JFrame {
     private void btn_domicilioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_domicilioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_domicilioActionPerformed
+
+    private void btn_UsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_UsuariosMouseClicked
+
+        Usuarios usuarios = new Usuarios();
+        usuarios.setVisible(true);
+        usuarios.pack();
+        usuarios.setLocationRelativeTo(null);
+        usuarios.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+    }//GEN-LAST:event_btn_UsuariosMouseClicked
+
+    private void btn_ProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ProductosMouseClicked
+        Productos productos = new Productos();
+        productos.setVisible(true);
+        productos.pack();
+        productos.setLocationRelativeTo(null);
+        productos.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+    }//GEN-LAST:event_btn_ProductosMouseClicked
+
+    private void btn_ordenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ordenesMouseClicked
+        Ordenes ordenes = new Ordenes();
+        ordenes.setVisible(true);
+        ordenes.pack();
+        ordenes.setLocationRelativeTo(null);
+        ordenes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+
+    }//GEN-LAST:event_btn_ordenesMouseClicked
+
+    private void btn_domicilioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_domicilioMouseClicked
+         Domicilio domicilio = new Domicilio();
+        domicilio.setVisible(true);
+        domicilio.pack();
+        domicilio.setLocationRelativeTo(null);
+        domicilio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+
+
+    }//GEN-LAST:event_btn_domicilioMouseClicked
 
     /**
      * @param args the command line arguments

@@ -68,9 +68,11 @@ public class Register extends javax.swing.JFrame {
 
         jTextNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
-        jButtonRegistarse.setText("Registrarse");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_guardar.png"))); // NOI18N
+        jButton1.setText("Registrarse");
 
-        jButtonCancelar.setText("Cancelar");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
+        jButton2.setText("Cancelar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,7 +109,7 @@ public class Register extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(153, 153, 153)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -128,8 +130,8 @@ public class Register extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(jButtonRegistarse)
                 .addGap(18, 18, 18)
-                .addComponent(jButtonCancelar)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addComponent(jButton2)
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
