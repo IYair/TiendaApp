@@ -43,6 +43,9 @@ public class F_Usuarios extends javax.swing.JFrame {
         jLabel_miel1 = new javax.swing.JLabel();
         jLabel_miel_osito = new javax.swing.JLabel();
         jLabel_miel_botella = new javax.swing.JLabel();
+        jLabel_precio1 = new javax.swing.JLabel();
+        jLabel_precio2 = new javax.swing.JLabel();
+        jLabel_precio3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,6 +108,15 @@ public class F_Usuarios extends javax.swing.JFrame {
         jLabel_miel_botella.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel_miel_botella.setText("Botella miel 750ml");
 
+        jLabel_precio1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel_precio1.setText("$ 50 mxn");
+
+        jLabel_precio2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel_precio2.setText("$ 30 mxn");
+
+        jLabel_precio3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel_precio3.setText("$ 120 mxn");
+
         javax.swing.GroupLayout jPanel_productosLayout = new javax.swing.GroupLayout(jPanel_productos);
         jPanel_productos.setLayout(jPanel_productosLayout);
         jPanel_productosLayout.setHorizontalGroup(
@@ -115,18 +127,24 @@ public class F_Usuarios extends javax.swing.JFrame {
                     .addGroup(jPanel_productosLayout.createSequentialGroup()
                         .addComponent(jLabel_miel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel_miel_osito)
+                        .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel_miel_osito)
+                            .addComponent(jLabel_precio2))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel_productosLayout.createSequentialGroup()
                         .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel_productosLayout.createSequentialGroup()
                                 .addComponent(label_miel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel_miel1))
+                                .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_miel1)
+                                    .addComponent(jLabel_precio1)))
                             .addGroup(jPanel_productosLayout.createSequentialGroup()
                                 .addComponent(jLabel_miel3)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel_miel_botella)))
+                                .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_miel_botella)
+                                    .addComponent(jLabel_precio3))))
                         .addGap(0, 575, Short.MAX_VALUE))))
         );
         jPanel_productosLayout.setVerticalGroup(
@@ -136,15 +154,23 @@ public class F_Usuarios extends javax.swing.JFrame {
                     .addComponent(label_miel1)
                     .addGroup(jPanel_productosLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel_miel1)))
+                        .addComponent(jLabel_miel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_precio1)))
                 .addGap(60, 60, 60)
                 .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_miel2)
-                    .addComponent(jLabel_miel_osito))
+                    .addGroup(jPanel_productosLayout.createSequentialGroup()
+                        .addComponent(jLabel_miel_osito)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_precio2)))
                 .addGap(65, 65, 65)
                 .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_miel3)
-                    .addComponent(jLabel_miel_botella))
+                    .addGroup(jPanel_productosLayout.createSequentialGroup()
+                        .addComponent(jLabel_miel_botella)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel_precio3)))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
 
@@ -223,6 +249,9 @@ public class F_Usuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_miel3;
     private javax.swing.JLabel jLabel_miel_botella;
     private javax.swing.JLabel jLabel_miel_osito;
+    private javax.swing.JLabel jLabel_precio1;
+    private javax.swing.JLabel jLabel_precio2;
+    private javax.swing.JLabel jLabel_precio3;
     private javax.swing.JLabel jLabel_productos;
     private javax.swing.JPanel jPanel_banner;
     private javax.swing.JPanel jPanel_productos;
