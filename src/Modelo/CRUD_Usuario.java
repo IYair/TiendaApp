@@ -14,7 +14,7 @@ import java.sql.SQLException;
  *
  * @author Final
  */
-public class CRUD_Usuario {
+public class CRUD_Usuario extends Conexion{
     
     public boolean RegistrarUsuario(CRUD_Usuario usuario){
     
