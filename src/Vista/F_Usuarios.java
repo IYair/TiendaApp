@@ -36,6 +36,7 @@ public class F_Usuarios extends javax.swing.JFrame {
         jPanel_banner = new javax.swing.JPanel();
         jLabel_productos = new javax.swing.JLabel();
         btn_carrito_compras = new javax.swing.JButton();
+        btn_guardar = new javax.swing.JButton();
         jPanel_productos = new javax.swing.JPanel();
         label_miel1 = new javax.swing.JLabel();
         jLabel_miel2 = new javax.swing.JLabel();
@@ -73,6 +74,9 @@ public class F_Usuarios extends javax.swing.JFrame {
             }
         });
 
+        btn_guardar.setBackground(new java.awt.Color(185, 226, 140));
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/perfil-del-usuario.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel_bannerLayout = new javax.swing.GroupLayout(jPanel_banner);
         jPanel_banner.setLayout(jPanel_bannerLayout);
         jPanel_bannerLayout.setHorizontalGroup(
@@ -83,6 +87,8 @@ public class F_Usuarios extends javax.swing.JFrame {
                 .addContainerGap(555, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_guardar)
+                .addGap(18, 18, 18)
                 .addComponent(btn_carrito_compras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -92,7 +98,9 @@ public class F_Usuarios extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(jLabel_productos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_carrito_compras)
+                .addGroup(jPanel_bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_guardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_carrito_compras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12))
         );
 
@@ -262,6 +270,7 @@ public class F_Usuarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_carrito_compras;
+    private javax.swing.JButton btn_guardar;
     private javax.swing.JButton jButton_agregarCarrito1;
     private javax.swing.JButton jButton_agregarCarrito2;
     private javax.swing.JButton jButton_agregarCarrito3;
