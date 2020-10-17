@@ -18,4 +18,16 @@ import javax.swing.JOptionPane;
  */
 public class ControladorUsuario {
     
+    private Usuario modeloUsuario;
+    private CRUD_Usuario modeloCRUDUsuario;
+    private Register vistaUsuario;
+    
+    public ControladorUsuario(Usuario usuario, CRUD_Usuario crudusuario, Register formularioUsuario){
+     this.modeloUsuario=usuario;
+     this.vistaUsuario=formularioUsuario;
+     this.modeloCRUDUsuario=crudusuario;
 }
+    
+    private Register vistaUsuario;
+    private CRUD_Usuario modeloCRUDUsuario;
+    private Usuario modeloUsuario;
