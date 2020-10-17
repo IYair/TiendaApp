@@ -46,3 +46,13 @@ public class ControladorUsuario implements ActionListener{
         else{
             JOptionPane.showMessageDialog(null,"Error al crear Usuario");
         }
+    }
+    public void Limpiar(){
+            vistaUsuario.jPasswordContraseña.setText(null);
+            vistaUsuario.jTextNombre.setText(null);
+            vistaUsuario.jTextApellido.setText(null);
+            vistaUsuario.jPasswordContraseña.setText(null);
+            vistaUsuario.jTextDateborn.setText(null);
+            
+        }
+}
