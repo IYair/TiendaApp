@@ -132,12 +132,10 @@ public class Carro_compra extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_pagarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_pagarMouseClicked
-        metodosPago metodo= new metodosPago();
-        metodo.setVisible(true);
-        metodo.pack();
-        metodo.setLocationRelativeTo(null);
-        metodo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
+    carrito_Domicilio carrito = new carrito_Domicilio();
+        carrito.setVisible(true);
+        carrito.pack();
+        carrito.setLocationRelativeTo(null);
 
 
     }//GEN-LAST:event_btn_pagarMouseClicked
