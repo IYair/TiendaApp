@@ -26,6 +26,7 @@ public class ControladorUsuario implements ActionListener{
      this.modeloUsuario=usuario;
      this.vistaUsuario=formularioUsuario;
      this.modeloCRUDUsuario=crudusuario;
+     this.vistaUsuario.jButtonRegistarse.addActionListener(this);
 }
     
     private Register vistaUsuario;
