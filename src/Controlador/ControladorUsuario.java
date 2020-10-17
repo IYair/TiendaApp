@@ -32,6 +32,13 @@ public class ControladorUsuario implements ActionListener{
         vistaUsuario.setTitle("Crear Usuario");
         vistaUsuario.setLocationRelativeTo(null);
     }
+    @Override
+    public void actionPerformed(ActionEvent e){
+        modeloUsuario.setPassword(vistaUsuario.jPasswordContraseña.getText());
+        modeloUsuario.setNombre(vistaUsuario.jTextNombre.getText());
+        modeloUsuario.setApellido(vistaUsuario.jTextApellido.getText());
+        modeloUsuario.setCorreo(vistaUsuario.jTextCorreo.getText());
+        modeloUsuario.setDateborn(vistaUsuario.jTextDateborn.getText());
     
     private Register vistaUsuario;
     private CRUD_Usuario modeloCRUDUsuario;
