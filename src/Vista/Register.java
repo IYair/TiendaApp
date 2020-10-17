@@ -33,19 +33,17 @@ public class Register extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPasswordContraseña = new javax.swing.JPasswordField();
         jTextNombre = new javax.swing.JTextField();
         jTextApellido = new javax.swing.JTextField();
         jTextDateborn = new javax.swing.JTextField();
         jButtonRegistarse = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
+        jPasswordContraseña = new javax.swing.JTextField();
         jTextCorreo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 630));
-        setMaximumSize(new java.awt.Dimension(500, 630));
         setMinimumSize(new java.awt.Dimension(500, 630));
-        setPreferredSize(new java.awt.Dimension(500, 630));
         setSize(new java.awt.Dimension(500, 630));
         getContentPane().setLayout(null);
 
@@ -95,13 +93,13 @@ public class Register extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonRegistarse)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextNombre)
-                            .addComponent(jTextApellido)
-                            .addComponent(jTextDateborn, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordContraseña)
-                            .addComponent(jTextCorreo))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPasswordContraseña, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextCorreo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextNombre, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextApellido, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextDateborn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
                         .addGap(131, 131, 131))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -110,9 +108,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(153, 153, 153)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,7 +121,7 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jPasswordContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextDateborn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -133,7 +129,7 @@ public class Register extends javax.swing.JFrame {
                 .addComponent(jButtonRegistarse)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonCancelar)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -178,18 +174,18 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCancelar;
-    private javax.swing.JButton jButtonRegistarse;
+    public javax.swing.JButton jButtonCancelar;
+    public javax.swing.JButton jButtonRegistarse;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordContraseña;
-    private javax.swing.JTextField jTextApellido;
-    private javax.swing.JTextField jTextCorreo;
-    private javax.swing.JTextField jTextDateborn;
-    private javax.swing.JTextField jTextNombre;
+    public javax.swing.JTextField jPasswordContraseña;
+    public javax.swing.JTextField jTextApellido;
+    public javax.swing.JTextField jTextCorreo;
+    public javax.swing.JTextField jTextDateborn;
+    public javax.swing.JTextField jTextNombre;
     // End of variables declaration//GEN-END:variables
 }
