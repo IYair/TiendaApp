@@ -20,5 +20,6 @@ public class CRUD_Usuario extends Conexion{
         CallableStatement ps=null;
         Connection con = getConexion();
         
+        String sql = "{call PA_CreateUsuario (?,?,?,?,?)}";
 }
 }
