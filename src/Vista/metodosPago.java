@@ -66,6 +66,11 @@ public class metodosPago extends javax.swing.JFrame {
                 jButton_tarjetaMouseClicked(evt);
             }
         });
+        jButton_tarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_tarjetaActionPerformed(evt);
+            }
+        });
 
         jButton_efectivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/dinero.png"))); // NOI18N
         jButton_efectivo.setText("Efectivo");
@@ -102,22 +107,18 @@ public class metodosPago extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_tarjetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_tarjetaMouseClicked
-         carrito_Domicilio carrito = new carrito_Domicilio();
-        carrito.setVisible(true);
-        carrito.pack();
-        carrito.setLocationRelativeTo(null);
-       //carrito.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       //this.dispose();
+         
     }//GEN-LAST:event_jButton_tarjetaMouseClicked
 
     private void jButton_efectivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_efectivoMouseClicked
 
-        carrito_Domicilio carrito = new carrito_Domicilio();
-        carrito.setVisible(true);
-        carrito.pack();
-        carrito.setLocationRelativeTo(null);
+        
 
     }//GEN-LAST:event_jButton_efectivoMouseClicked
+
+    private void jButton_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_tarjetaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_tarjetaActionPerformed
 
     /**
      * @param args the command line arguments
