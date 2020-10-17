@@ -19,7 +19,8 @@ public class Conexion {
     public Connection getConexion(){
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conexion=(Connection) DriverManager.getConnection(UrlConexion);
+            conexion = (Connection) DriverManager.getConnection(UrlConexion);
+            System.out.println("Conexcion Establecida");
 
         } catch (SQLException ex) {
             
