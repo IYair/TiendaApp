@@ -37,6 +37,12 @@ public class F_Usuarios extends javax.swing.JFrame {
         jLabel_productos = new javax.swing.JLabel();
         btn_carrito_compras = new javax.swing.JButton();
         jPanel_productos = new javax.swing.JPanel();
+        label_miel1 = new javax.swing.JLabel();
+        jLabel_miel2 = new javax.swing.JLabel();
+        jLabel_miel3 = new javax.swing.JLabel();
+        jLabel_miel1 = new javax.swing.JLabel();
+        jLabel_miel_osito = new javax.swing.JLabel();
+        jLabel_miel_botella = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,7 +74,7 @@ public class F_Usuarios extends javax.swing.JFrame {
             .addGroup(jPanel_bannerLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel_productos)
-                .addContainerGap(474, Short.MAX_VALUE))
+                .addContainerGap(555, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_carrito_compras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -84,15 +90,62 @@ public class F_Usuarios extends javax.swing.JFrame {
                 .addGap(12, 12, 12))
         );
 
+        label_miel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/miel.png"))); // NOI18N
+
+        jLabel_miel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/miel2.png"))); // NOI18N
+
+        jLabel_miel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/miel3.png"))); // NOI18N
+
+        jLabel_miel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_miel1.setText("Miel Carlota 500ml");
+
+        jLabel_miel_osito.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_miel_osito.setText("Miel pura 300ml");
+
+        jLabel_miel_botella.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_miel_botella.setText("Botella miel 750ml");
+
         javax.swing.GroupLayout jPanel_productosLayout = new javax.swing.GroupLayout(jPanel_productos);
         jPanel_productos.setLayout(jPanel_productosLayout);
         jPanel_productosLayout.setHorizontalGroup(
             jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel_productosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_productosLayout.createSequentialGroup()
+                        .addComponent(jLabel_miel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_miel_osito)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel_productosLayout.createSequentialGroup()
+                        .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_productosLayout.createSequentialGroup()
+                                .addComponent(label_miel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel_miel1))
+                            .addGroup(jPanel_productosLayout.createSequentialGroup()
+                                .addComponent(jLabel_miel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel_miel_botella)))
+                        .addGap(0, 575, Short.MAX_VALUE))))
         );
         jPanel_productosLayout.setVerticalGroup(
             jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGroup(jPanel_productosLayout.createSequentialGroup()
+                .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_miel1)
+                    .addGroup(jPanel_productosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel_miel1)))
+                .addGap(60, 60, 60)
+                .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_miel2)
+                    .addComponent(jLabel_miel_osito))
+                .addGap(65, 65, 65)
+                .addGroup(jPanel_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_miel3)
+                    .addComponent(jLabel_miel_botella))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -107,7 +160,8 @@ public class F_Usuarios extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel_productos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_productos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         pack();
@@ -164,8 +218,14 @@ public class F_Usuarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_carrito_compras;
+    private javax.swing.JLabel jLabel_miel1;
+    private javax.swing.JLabel jLabel_miel2;
+    private javax.swing.JLabel jLabel_miel3;
+    private javax.swing.JLabel jLabel_miel_botella;
+    private javax.swing.JLabel jLabel_miel_osito;
     private javax.swing.JLabel jLabel_productos;
     private javax.swing.JPanel jPanel_banner;
     private javax.swing.JPanel jPanel_productos;
+    private javax.swing.JLabel label_miel1;
     // End of variables declaration//GEN-END:variables
 }
