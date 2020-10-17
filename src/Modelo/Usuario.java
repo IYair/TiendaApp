@@ -59,19 +59,11 @@ public class Usuario {
         this.Dateborn = Dateborn;
     }
 
-    public Byte getEstado() {
-        return Estado;
-    }
-
-    public void setEstado(Byte Estado) {
-        this.Estado = Estado;
-    }
     private int id;
     private String Password;
     private String Nombre;
     private String Apellido;
     private String Correo;
     private String Dateborn;
-    private Byte Estado;
     
 }
