@@ -21,5 +21,26 @@ public class CRUD_Usuario extends Conexion{
         Connection con = getConexion();
         
         String sql = "{call PA_CreateUsuario (?,?,?,?,?)}";
-}
+        try {
+            ps = con.prepareCall(sql);
+            ps.setString(1, usuario.getPassword());
+            ps.setString(2, usuario.getNombre());
+            ps.setString(3, usuario.getApellido());
+            ps.setString(4, usuario.getCorreo());
+            ps.setString(5, usuario.getDateborn());
+            ps.execute();
+            return true;
+        } 
+        catch (SQLException ex) {
+            System.err.println(ex);
+            return false;
+        }
+        finally{
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                System.err.println(ex);
+            }
+        }
+    }
 }
