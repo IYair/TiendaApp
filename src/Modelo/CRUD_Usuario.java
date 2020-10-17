@@ -16,7 +16,9 @@ import java.sql.SQLException;
  */
 public class CRUD_Usuario extends Conexion{
     
-    public boolean RegistrarUsuario(CRUD_Usuario usuario){
-    
+    public boolean RegistrarUsuario(Usuario usuario){
+        CallableStatement ps=null;
+        Connection con = getConexion();
+        
 }
 }
