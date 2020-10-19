@@ -42,6 +42,7 @@ public class Usuarios extends javax.swing.JFrame {
         jPanel_banner = new javax.swing.JPanel();
         jLabel_admi_usuarios = new javax.swing.JLabel();
         btn_home = new javax.swing.JButton();
+        jButtonActualizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(192, 192, 192));
@@ -68,6 +69,11 @@ public class Usuarios extends javax.swing.JFrame {
         btn_eliminar.setText("Eliminar");
 
         btn_modificar.setText("Modificar");
+        btn_modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_modificarActionPerformed(evt);
+            }
+        });
 
         jPanel_banner.setBackground(new java.awt.Color(51, 153, 255));
 
@@ -105,6 +111,8 @@ public class Usuarios extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButtonActualizar.setText("Actualizar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -112,10 +120,15 @@ public class Usuarios extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_insertar)
-                    .addComponent(btn_eliminar)
-                    .addComponent(btn_modificar))
-                .addGap(18, 18, 18)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_insertar)
+                            .addComponent(btn_eliminar)
+                            .addComponent(btn_modificar))
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonActualizar)
+                        .addGap(18, 18, 18)))
                 .addComponent(jScrollPane1)
                 .addContainerGap())
             .addComponent(jPanel_banner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -129,10 +142,12 @@ public class Usuarios extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btn_insertar)
-                        .addGap(36, 36, 36)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_eliminar)
-                        .addGap(38, 38, 38)
-                        .addComponent(btn_modificar)))
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_modificar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonActualizar)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -166,6 +181,10 @@ public class Usuarios extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_btn_homeMouseClicked
+
+    private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_modificarActionPerformed
  //ESTO SE USARÁ EN EL APARTADO DEL CONTROLADOR
 
     
@@ -206,6 +225,7 @@ public class Usuarios extends javax.swing.JFrame {
     private javax.swing.JButton btn_home;
     public javax.swing.JButton btn_insertar;
     public javax.swing.JButton btn_modificar;
+    public javax.swing.JButton jButtonActualizar;
     private javax.swing.JLabel jLabel_admi_usuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel_banner;
