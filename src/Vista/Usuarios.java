@@ -35,7 +35,7 @@ public class Usuarios extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableUsuarios = new javax.swing.JTable();
         btn_insertar = new javax.swing.JButton();
         btn_eliminar = new javax.swing.JButton();
         btn_modificar = new javax.swing.JButton();
@@ -48,24 +48,15 @@ public class Usuarios extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(192, 192, 192));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "ID", "Nombre", "Apellido", "Correo", "Contraseña"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTableUsuarios);
 
         btn_insertar.setText("Insertar");
         btn_insertar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +89,7 @@ public class Usuarios extends javax.swing.JFrame {
             .addGroup(jPanel_bannerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel_admi_usuarios)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(459, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_bannerLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_home)
@@ -124,8 +115,8 @@ public class Usuarios extends javax.swing.JFrame {
                     .addComponent(btn_insertar)
                     .addComponent(btn_eliminar)
                     .addComponent(btn_modificar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
             .addComponent(jPanel_banner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -211,14 +202,14 @@ public class Usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_eliminar;
+    public javax.swing.JButton btn_eliminar;
     private javax.swing.JButton btn_home;
-    private javax.swing.JButton btn_insertar;
-    private javax.swing.JButton btn_modificar;
+    public javax.swing.JButton btn_insertar;
+    public javax.swing.JButton btn_modificar;
     private javax.swing.JLabel jLabel_admi_usuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel_banner;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable jTableUsuarios;
     // End of variables declaration//GEN-END:variables
 }
