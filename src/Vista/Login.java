@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vista;
 
 import javax.swing.JFrame;
@@ -30,21 +25,17 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextUsuario = new javax.swing.JTextField();
         jPasswordContraseña = new javax.swing.JPasswordField();
         jButtonLogin = new javax.swing.JButton();
-        jLabelRegister = new javax.swing.JLabel();
         jLabel_imagen = new javax.swing.JLabel();
-
-        jLabel3.setText("jLabel3");
+        jButtonClickRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(500, 630));
-        setMaximumSize(new java.awt.Dimension(500, 630));
         setMinimumSize(new java.awt.Dimension(500, 630));
         setSize(new java.awt.Dimension(500, 630));
 
@@ -55,7 +46,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setBackground(java.awt.Color.gray);
         jLabel1.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel1.setText("Usuario");
+        jLabel1.setText("Correo");
 
         jLabel2.setBackground(java.awt.Color.gray);
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
@@ -68,39 +59,49 @@ public class Login extends javax.swing.JFrame {
         });
 
         jButtonLogin.setText("Login");
-
-        jLabelRegister.setBackground(javax.swing.UIManager.getDefaults().getColor("nb.dataview.tablecell.edited.selected.foreground"));
-        jLabelRegister.setForeground(new java.awt.Color(153, 153, 153));
-        jLabelRegister.setText("Click here to create new count");
-        jLabelRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabelRegister.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelRegisterMouseClicked(evt);
+        jButtonLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginActionPerformed(evt);
             }
         });
 
         jLabel_imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/iniciar-sesion.png"))); // NOI18N
+
+        jButtonClickRegister.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonClickRegister.setForeground(new java.awt.Color(204, 204, 204));
+        jButtonClickRegister.setText("Click para Registrarse");
+        jButtonClickRegister.setBorder(null);
+        jButtonClickRegister.setOpaque(false);
+        jButtonClickRegister.setRequestFocusEnabled(false);
+        jButtonClickRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClickRegisterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(133, 133, 133)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel1))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField2)
-                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addComponent(jLabelRegister))
-                    .addComponent(jLabel_imagen))
+                                    .addComponent(jTextUsuario)
+                                    .addComponent(jPasswordContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel_imagen)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jButtonClickRegister)))
                 .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -117,10 +118,10 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jPasswordContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButtonLogin)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelRegister)
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addComponent(jButtonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonClickRegister)
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -141,18 +142,13 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordContraseñaActionPerformed
 
-    private void jLabelRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRegisterMouseClicked
-        //Evento form registro
-        Register rgf= new Register();
-        rgf.setVisible(true);
-        rgf.pack();
-        rgf.setLocationRelativeTo(null);
-        rgf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
-        
-        
-        
-    }//GEN-LAST:event_jLabelRegisterMouseClicked
+    private void jButtonClickRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClickRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonClickRegisterActionPerformed
+
+    private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,14 +186,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonLogin;
+    public javax.swing.JButton jButtonClickRegister;
+    public javax.swing.JButton jButtonLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabelRegister;
     private javax.swing.JLabel jLabel_imagen;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordContraseña;
-    private javax.swing.JTextField jTextUsuario;
+    public javax.swing.JPasswordField jPasswordContraseña;
+    public javax.swing.JTextField jTextUsuario;
     // End of variables declaration//GEN-END:variables
 }

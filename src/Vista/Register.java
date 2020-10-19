@@ -33,12 +33,12 @@ public class Register extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jPasswordContraseña = new javax.swing.JPasswordField();
         jTextNombre = new javax.swing.JTextField();
         jTextApellido = new javax.swing.JTextField();
         jTextDateborn = new javax.swing.JTextField();
         jButtonRegistarse = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
-        jPasswordContraseña = new javax.swing.JTextField();
         jTextCorreo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,13 +66,42 @@ public class Register extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(153, 153, 153));
         jLabel5.setText("Fecha de nacimiento");
 
+        jPasswordContraseña.setToolTipText("Introduce una Contraseña.");
+
+        jTextNombre.setToolTipText("Introduce tu Nombre.");
         jTextNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextNombreActionPerformed(evt);
+            }
+        });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_guardar.png"))); // NOI18N
-        jButton1.setText("Registrarse");
+        jTextApellido.setToolTipText("Introduce tu Apellido.");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
-        jButton2.setText("Cancelar");
+        jTextDateborn.setToolTipText("AAAA/MM/DD");
+
+        jButtonRegistarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_guardar.png"))); // NOI18N
+        jButtonRegistarse.setText("Registrarse");
+        jButtonRegistarse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonRegistarseMouseClicked(evt);
+            }
+        });
+        jButtonRegistarse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistarseActionPerformed(evt);
+            }
+        });
+
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
+        jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
+
+        jTextCorreo.setToolTipText("Introduce un Correo Electronico.");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,13 +124,13 @@ public class Register extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonRegistarse)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPasswordContraseña, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextCorreo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextNombre, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextApellido, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextDateborn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextNombre)
+                            .addComponent(jTextApellido)
+                            .addComponent(jTextDateborn, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordContraseña)
+                            .addComponent(jTextCorreo))
                         .addGap(131, 131, 131))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -109,7 +138,7 @@ public class Register extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(153, 153, 153)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -123,22 +152,40 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jPasswordContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextDateborn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addComponent(jButtonRegistarse)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(jButtonCancelar)
                 .addContainerGap(179, Short.MAX_VALUE))
         );
+
+        jTextNombre.getAccessibleContext().setAccessibleName("");
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 500, 630);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextNombreActionPerformed
+
+    private void jButtonRegistarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistarseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRegistarseActionPerformed
+
+    private void jButtonRegistarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistarseMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRegistarseMouseClicked
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,7 +231,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    public javax.swing.JTextField jPasswordContraseña;
+    public javax.swing.JPasswordField jPasswordContraseña;
     public javax.swing.JTextField jTextApellido;
     public javax.swing.JTextField jTextCorreo;
     public javax.swing.JTextField jTextDateborn;
