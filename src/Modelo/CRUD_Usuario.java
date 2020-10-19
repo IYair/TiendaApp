@@ -42,10 +42,27 @@ public class CRUD_Usuario extends Conexion {
         }
     }
 
+    public boolean EliminarUsuario(Usuario usuario) {
+        CallableStatement ps = null;
+        Connection con = getConexion();
+        String sql = "{call PA_DeleteUsuario (?)}";
+        try {
+            ps = con.prepareCall(sql);
+            ps.setInt(1, usuario.getId());
+            ps.execute();
+            return true;
+        } catch (SQLException ex) {
             System.err.println(ex);
             return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                System.err.println(ex);
+            }
         }
-        finally{
+    }
+
             try {
                 con.close();
             } catch (SQLException ex) {
