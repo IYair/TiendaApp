@@ -89,4 +89,37 @@ public class CRUD_Usuario extends Conexion {
         }
     }
 
-}
+    public ArrayList<Usuario> ObtenerUsuario() {
+        ArrayList<Usuario> lstUsuarios = new ArrayList();
+        CallableStatement ps = null;
+        ResultSet rs = null;
+        Connection con = getConexion();
+        String sql = "{call PA_ReadUsuario}";
+        try {
+            ps = con.prepareCall(sql);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Usuario usuario = new Usuario();
+                usuario.setId(rs.getInt(1));
+                usuario.setPassword(rs.getString(2));
+                usuario.setNombre(rs.getString(3));
+                usuario.setApellido(rs.getString(4));
+                usuario.setCorreo(rs.getString(5));
+                usuario.setDateborn(rs.getString(6));
+                usuario.setDateReg(rs.getString(7));
+                usuario.setEstado(Boolean.parseBoolean(rs.getString(8)));
+                lstUsuarios.add(usuario);
+            }
+            return lstUsuarios;
+        } catch (SQLException ex) {
+            lstUsuarios = null;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(CRUD_Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lstUsuarios;
+    }
