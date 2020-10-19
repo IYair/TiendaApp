@@ -36,7 +36,7 @@ public class Usuarios extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableUsuarios = new javax.swing.JTable();
-        btn_insertar = new javax.swing.JButton();
+        jButtonInsertar = new javax.swing.JButton();
         btn_eliminar = new javax.swing.JButton();
         btn_modificar = new javax.swing.JButton();
         jPanel_banner = new javax.swing.JPanel();
@@ -59,10 +59,10 @@ public class Usuarios extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTableUsuarios);
 
-        btn_insertar.setText("Insertar");
-        btn_insertar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonInsertar.setText("Insertar");
+        jButtonInsertar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_insertarActionPerformed(evt);
+                jButtonInsertarActionPerformed(evt);
             }
         });
 
@@ -122,7 +122,7 @@ public class Usuarios extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_insertar)
+                            .addComponent(jButtonInsertar)
                             .addComponent(btn_eliminar)
                             .addComponent(btn_modificar))
                         .addGap(22, 22, 22))
@@ -141,7 +141,7 @@ public class Usuarios extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btn_insertar)
+                        .addComponent(jButtonInsertar)
                         .addGap(18, 18, 18)
                         .addComponent(btn_eliminar)
                         .addGap(18, 18, 18)
@@ -165,9 +165,9 @@ public class Usuarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_insertarActionPerformed
+    private void jButtonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInsertarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_insertarActionPerformed
+    }//GEN-LAST:event_jButtonInsertarActionPerformed
 
     private void btn_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseClicked
         F_Administrador home = new F_Administrador();
@@ -223,9 +223,9 @@ public class Usuarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_eliminar;
     private javax.swing.JButton btn_home;
-    public javax.swing.JButton btn_insertar;
     public javax.swing.JButton btn_modificar;
     public javax.swing.JButton jButtonActualizar;
+    public javax.swing.JButton jButtonInsertar;
     private javax.swing.JLabel jLabel_admi_usuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel_banner;
