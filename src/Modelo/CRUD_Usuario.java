@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -89,8 +90,16 @@ public class CRUD_Usuario extends Conexion {
         }
     }
 
-    public ArrayList<Usuario> ObtenerUsuario() {
-        ArrayList<Usuario> lstUsuarios = new ArrayList();
+    public DefaultTableModel ObtenerUsuario() {
+        DefaultTableModel Usuarios = new DefaultTableModel();
+        Usuarios.addColumn("id");
+        Usuarios.addColumn("Password");
+        Usuarios.addColumn("Nombre");
+        Usuarios.addColumn("Apellido");
+        Usuarios.addColumn("Correo");
+        Usuarios.addColumn("F.Nacimiento");
+        Usuarios.addColumn("F.Registro");
+        Usuarios.addColumn("Estado");
         CallableStatement ps = null;
         ResultSet rs = null;
         Connection con = getConexion();
@@ -98,22 +107,17 @@ public class CRUD_Usuario extends Conexion {
         try {
             ps = con.prepareCall(sql);
             rs = ps.executeQuery();
-
-            while (rs.next()) {
-                Usuario usuario = new Usuario();
-                usuario.setId(rs.getInt(1));
-                usuario.setPassword(rs.getString(2));
-                usuario.setNombre(rs.getString(3));
-                usuario.setApellido(rs.getString(4));
-                usuario.setCorreo(rs.getString(5));
-                usuario.setDateborn(rs.getString(6));
-                usuario.setDateReg(rs.getString(7));
-                usuario.setEstado(Boolean.parseBoolean(rs.getString(8)));
-                lstUsuarios.add(usuario);
+            
+            while(rs.next())
+            {
+                Object dato[] = new Object[8];
+                for (int i = 0; i < 8; i++) {
+                    dato [i] = rs.getString(i+1);
+                }
+                Usuarios.addRow(dato);
             }
-            return lstUsuarios;
+            
         } catch (SQLException ex) {
-            lstUsuarios = null;
         } finally {
             try {
                 con.close();
@@ -121,7 +125,7 @@ public class CRUD_Usuario extends Conexion {
                 Logger.getLogger(CRUD_Usuario.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        return lstUsuarios;
+        return Usuarios;
     }
 
     public boolean Login(Usuario usuario) {
