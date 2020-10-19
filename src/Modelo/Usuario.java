@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo;
 
 /**
@@ -65,5 +60,23 @@ public class Usuario {
     private String Apellido;
     private String Correo;
     private String Dateborn;
-    
+
+    public String getDateReg() {
+        return DateReg;
+    }
+
+    public void setDateReg(String DateReg) {
+        this.DateReg = DateReg;
+    }
+
+    public Boolean getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(Boolean Estado) {
+        this.Estado = Estado;
+    }
+    private String DateReg;
+    private Boolean Estado;
+
 }
