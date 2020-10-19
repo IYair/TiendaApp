@@ -123,3 +123,33 @@ public class CRUD_Usuario extends Conexion {
         }
         return lstUsuarios;
     }
+
+    public boolean Login(Usuario usuario) {
+        PreparedStatement ps = null;
+        Connection con = getConexion();
+
+        String sql = "select * from Usuario where Correo=? and Password=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, usuario.getCorreo());
+            ps.setString(2, usuario.getPassword());
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null, "Bienvenido");
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrecto");
+            }
+            return true;
+        } catch (SQLException ex) {
+            System.err.println(ex);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                System.err.println(ex);
+            }
+        }
+
+    }
+}
