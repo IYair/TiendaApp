@@ -30,8 +30,18 @@ public class CRUD_Usuario extends Conexion {
             ps.setString(5, usuario.getDateborn());
             ps.execute();
             return true;
-        } 
-        catch (SQLException ex) {
+        } catch (SQLException ex) {
+            System.err.println(ex);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                System.err.println(ex);
+            }
+        }
+    }
+
             System.err.println(ex);
             return false;
         }
