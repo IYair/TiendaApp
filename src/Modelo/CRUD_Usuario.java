@@ -63,6 +63,24 @@ public class CRUD_Usuario extends Conexion {
         }
     }
 
+    public boolean EditarUsuario(Usuario usuario) {
+        CallableStatement ps = null;
+        Connection con = getConexion();
+        String sql = "{call PA_UpdateUsuario(?,?,?,?,?,?)}";
+        try {
+            ps = con.prepareCall(sql);
+            ps.setInt(1, usuario.getId());
+            ps.setString(2, usuario.getPassword());
+            ps.setString(3, usuario.getNombre());
+            ps.setString(4, usuario.getApellido());
+            ps.setString(5, usuario.getCorreo());
+            ps.setString(6, usuario.getDateborn());
+            ps.execute();
+            return true;
+        } catch (SQLException ex) {
+            System.err.println(ex);
+            return false;
+        } finally {
             try {
                 con.close();
             } catch (SQLException ex) {
@@ -70,4 +88,5 @@ public class CRUD_Usuario extends Conexion {
             }
         }
     }
+
 }
