@@ -18,7 +18,7 @@ public class CRUD_Producto extends Conexion{
         CallableStatement ps = null;
         Connection con = getConexion();
 
-        String sql = "{call PA_CreateProducto (?,?,?,?,)}";
+        String sql = "{call PA_CreateProducto (?,?,?,?)}";
         try {
             ps = con.prepareCall(sql);
             ps.setString(1, producto.getNombre());
