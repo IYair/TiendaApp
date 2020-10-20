@@ -5,7 +5,9 @@
  */
 package Vista;
 
+import Controlador.ControladorModificar;
 import Modelo.CRUD_Usuario;
+import Modelo.Usuario;
 import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -23,6 +25,7 @@ public class Usuarios extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+    public static int n;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -177,20 +180,30 @@ public class Usuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonInsertarActionPerformed
 
     private void btn_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseClicked
-        F_Administrador home = new F_Administrador();
-        
-        
-        home.setVisible(true);
-        home.pack();
-        home.setLocationRelativeTo(null);
-        home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
-
-
+        dispose();
     }//GEN-LAST:event_btn_homeMouseClicked
 
     private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
-        // TODO add your handling code here:
+        int row = jTableUsuarios.getSelectedRow();
+        if (row == -1) {
+            JOptionPane.showMessageDialog(null, "Selecciona un Usuario");
+        } else {
+            int opc = JOptionPane.showConfirmDialog(this, "Estas seguro de modificar este usuario?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (opc == JOptionPane.YES_OPTION) {
+                
+            Usuario modelo = new Usuario();
+            CRUD_Usuario crudUsuario = new CRUD_Usuario();
+            modificar_Usuario vistaModificar = new modificar_Usuario();
+            ControladorModificar controlador = new ControladorModificar(modelo,crudUsuario,vistaModificar);
+            controlador.iniciar();
+            vistaModificar.setVisible(true);
+            vistaModificar.setLocationRelativeTo(null);
+            vistaModificar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            n = (Integer.parseInt(jTableUsuarios.getValueAt(row,0).toString()));
+            
+            
+            }
+        }
     }//GEN-LAST:event_btn_modificarActionPerformed
 
     private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
