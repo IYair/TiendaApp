@@ -21,15 +21,14 @@ public class F_Administrador extends javax.swing.JFrame {
     Vista.Panel_Administracion panel_Administracion;
     */
     
-    public String validar_Panel_Usuarios = "0";
+   /* public String validar_Panel_Usuarios = "0";
     public String validar_Panel_Ventas = "0";
     public String validar_Panel_Almacen = "0";
     public String validar_Panel_Productos = "0";
-    public String validar_panel_Administracion = "0";
+    public String validar_panel_Administracion = "0";*/
     
     public F_Administrador() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH); // hace full screen
         this.setLocationRelativeTo(null);
         
     }
@@ -293,7 +292,7 @@ public class F_Administrador extends javax.swing.JFrame {
             }//GEN-LAST:event_btn_ProductosActionPerformed
 
     private void btn_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_UsuariosActionPerformed
-       // abrir_Panel_Usuarios();
+        dispose();
     }//GEN-LAST:event_btn_UsuariosActionPerformed
 
     private void btn_ordenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ordenesActionPerformed
@@ -306,42 +305,26 @@ public class F_Administrador extends javax.swing.JFrame {
 
     private void btn_UsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_UsuariosMouseClicked
 
-        Usuarios usuarios = new Usuarios();
-        usuarios.setVisible(true);
-        usuarios.pack();
-        usuarios.setLocationRelativeTo(null);
-        usuarios.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
+
+        //this.dispose();
 
     }//GEN-LAST:event_btn_UsuariosMouseClicked
 
     private void btn_ProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ProductosMouseClicked
-        Productos productos = new Productos();
-        productos.setVisible(true);
-        productos.pack();
-        productos.setLocationRelativeTo(null);
-        productos.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         this.dispose();
 
     }//GEN-LAST:event_btn_ProductosMouseClicked
 
     private void btn_ordenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ordenesMouseClicked
-        Ordenes ordenes = new Ordenes();
-        ordenes.setVisible(true);
-        ordenes.pack();
-        ordenes.setLocationRelativeTo(null);
-        ordenes.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         this.dispose();
 
 
     }//GEN-LAST:event_btn_ordenesMouseClicked
 
     private void btn_domicilioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_domicilioMouseClicked
-         Domicilio domicilio = new Domicilio();
-        domicilio.setVisible(true);
-        domicilio.pack();
-        domicilio.setLocationRelativeTo(null);
-        domicilio.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         this.dispose();
 
 
@@ -384,10 +367,10 @@ public class F_Administrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Productos;
-    private javax.swing.JButton btn_Usuarios;
-    private javax.swing.JButton btn_domicilio;
-    private javax.swing.JButton btn_ordenes;
+    public javax.swing.JButton btn_Productos;
+    public javax.swing.JButton btn_Usuarios;
+    public javax.swing.JButton btn_domicilio;
+    public javax.swing.JButton btn_ordenes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_autores;
     private javax.swing.JLabel jLabel_bienvenido;

@@ -5,7 +5,10 @@
  */
 package Vista;
 
+import Modelo.CRUD_Usuario;
+import java.sql.SQLException;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,7 +22,6 @@ public class Usuarios extends javax.swing.JFrame {
     public Usuarios() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -67,6 +69,11 @@ public class Usuarios extends javax.swing.JFrame {
         });
 
         btn_eliminar.setText("Eliminar");
+        btn_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eliminarActionPerformed(evt);
+            }
+        });
 
         btn_modificar.setText("Modificar");
         btn_modificar.addActionListener(new java.awt.event.ActionListener() {
@@ -185,6 +192,19 @@ public class Usuarios extends javax.swing.JFrame {
     private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_modificarActionPerformed
+
+    private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
+        int row = jTableUsuarios.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(null, "Selecciona un Usuario");
+        }else{
+        int opc = JOptionPane.showConfirmDialog(this,"Estas seguro de eliminar este usuario?","Pregunta",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+        if(opc == JOptionPane.YES_OPTION){
+            CRUD_Usuario procedimiento = new CRUD_Usuario();
+            procedimiento.EliminarUsuario(Integer.parseInt(jTableUsuarios.getValueAt(row,0).toString()));
+        }
+        }
+    }//GEN-LAST:event_btn_eliminarActionPerformed
  //ESTO SE USARÁ EN EL APARTADO DEL CONTROLADOR
 
     
@@ -222,7 +242,7 @@ public class Usuarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_eliminar;
-    private javax.swing.JButton btn_home;
+    public javax.swing.JButton btn_home;
     public javax.swing.JButton btn_modificar;
     public javax.swing.JButton jButtonActualizar;
     public javax.swing.JButton jButtonInsertar;
