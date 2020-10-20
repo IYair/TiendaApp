@@ -1,5 +1,7 @@
 package Modelo;
 
+import Controlador.ControladorAdmInicio;
+import Vista.F_Administrador;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,13 +45,13 @@ public class CRUD_Usuario extends Conexion {
         }
     }
 
-    public boolean EliminarUsuario(Usuario usuario) {
+    public boolean EliminarUsuario(int usuario) {
         CallableStatement ps = null;
         Connection con = getConexion();
         String sql = "{call PA_DeleteUsuario (?)}";
         try {
             ps = con.prepareCall(sql);
-            ps.setInt(1, usuario.getId());
+            ps.setInt(1, usuario);
             ps.execute();
             return true;
         } catch (SQLException ex) {
@@ -140,6 +142,11 @@ public class CRUD_Usuario extends Conexion {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 JOptionPane.showMessageDialog(null, "Bienvenido");
+                
+                F_Administrador vistaUsuarios = new F_Administrador();
+                ControladorAdmInicio controlador = new ControladorAdmInicio(vistaUsuarios);
+                controlador.iniciar();
+                vistaUsuarios.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrecto");
             }
