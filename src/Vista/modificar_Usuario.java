@@ -66,6 +66,11 @@ public class modificar_Usuario extends javax.swing.JFrame {
 
         jButton_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
         jButton_cancelar.setText("Cancelar");
+        jButton_cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_cancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -119,14 +124,18 @@ public class modificar_Usuario extends javax.swing.JFrame {
                     .addComponent(jLabel_fechaNacimiento)
                     .addComponent(jTextField_fechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_modificar)
-                    .addComponent(jButton_cancelar))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton_cancelar)
+                    .addComponent(jButton_modificar))
                 .addGap(133, 133, 133))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton_cancelarActionPerformed
 
     /**
      * @param args the command line arguments
