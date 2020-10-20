@@ -60,14 +60,14 @@ public class ControladorAdmUsuario implements ActionListener {
             vistaAdministrador.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         }
         if (e.getSource() == vistaUsuarios.btn_modificar) {
-            Usuario modelo = new Usuario();
+            /*Usuario modelo = new Usuario();
             CRUD_Usuario crudUsuario = new CRUD_Usuario();
             modificar_Usuario vistaModificar = new modificar_Usuario();
             ControladorModificar controlador = new ControladorModificar(modelo,crudUsuario,vistaModificar);
             controlador.iniciar();
             vistaModificar.setVisible(true);
             vistaModificar.setLocationRelativeTo(null);
-            vistaModificar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            vistaModificar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
         }
     }
 
