@@ -60,6 +60,11 @@ public class modificarProducto extends javax.swing.JFrame {
 
         jButton_Cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icon_cancelar.png"))); // NOI18N
         jButton_Cancelar.setText("Cancelar");
+        jButton_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_CancelarActionPerformed(evt);
+            }
+        });
 
         jLabel_Id.setForeground(new java.awt.Color(153, 153, 153));
         jLabel_Id.setText("Id");
@@ -67,6 +72,7 @@ public class modificarProducto extends javax.swing.JFrame {
         jLabel_Nombre.setForeground(new java.awt.Color(153, 153, 153));
         jLabel_Nombre.setText("Nombre");
 
+        jTextField_Id.setEditable(false);
         jTextField_Id.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jLabel_Precio.setForeground(new java.awt.Color(153, 153, 153));
@@ -137,6 +143,10 @@ public class modificarProducto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ModificarActionPerformed
 
+    private void jButton_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton_CancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -180,10 +190,10 @@ public class modificarProducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Id;
     private javax.swing.JLabel jLabel_Nombre;
     private javax.swing.JLabel jLabel_Precio;
-    private javax.swing.JTextField jTextField_Categoria;
-    private javax.swing.JTextField jTextField_Descripción;
-    private javax.swing.JTextField jTextField_Id;
-    private javax.swing.JTextField jTextField_Nombre;
-    private javax.swing.JTextField jTextField_Precio;
+    public javax.swing.JTextField jTextField_Categoria;
+    public javax.swing.JTextField jTextField_Descripción;
+    public javax.swing.JTextField jTextField_Id;
+    public javax.swing.JTextField jTextField_Nombre;
+    public javax.swing.JTextField jTextField_Precio;
     // End of variables declaration//GEN-END:variables
 }

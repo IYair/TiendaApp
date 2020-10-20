@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Controlador.ControladorModificar;
+import Controlador.ControladorModificarUsuario;
 import Modelo.CRUD_Usuario;
 import Modelo.Usuario;
 import java.sql.SQLException;
@@ -194,7 +194,7 @@ public class Usuarios extends javax.swing.JFrame {
             Usuario modelo = new Usuario();
             CRUD_Usuario crudUsuario = new CRUD_Usuario();
             modificar_Usuario vistaModificar = new modificar_Usuario();
-            ControladorModificar controlador = new ControladorModificar(modelo,crudUsuario,vistaModificar);
+            ControladorModificarUsuario controlador = new ControladorModificarUsuario(modelo,crudUsuario,vistaModificar);
             controlador.iniciar();
             vistaModificar.setVisible(true);
             vistaModificar.setLocationRelativeTo(null);

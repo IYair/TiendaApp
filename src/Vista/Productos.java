@@ -5,8 +5,10 @@
  */
 package Vista;
 
+import Controlador.ControladorModificarProducto;
 import Modelo.CRUD_Producto;
 import Modelo.CRUD_Usuario;
+import Modelo.Producto;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -22,7 +24,7 @@ public class Productos extends javax.swing.JFrame {
     public Productos() {
         initComponents();
     }
-
+    public static int s;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,6 +71,11 @@ public class Productos extends javax.swing.JFrame {
 
         btn_modificar.setText("Modificar");
         btn_modificar.setPreferredSize(new java.awt.Dimension(71, 23));
+        btn_modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_modificarActionPerformed(evt);
+            }
+        });
 
         jPanel_banner.setBackground(new java.awt.Color(251, 253, 55));
 
@@ -169,6 +176,29 @@ public class Productos extends javax.swing.JFrame {
     private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
        dispose();
     }//GEN-LAST:event_btn_homeActionPerformed
+
+    private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
+        int row = jTableProductos.getSelectedRow();
+        if (row == -1) {
+            JOptionPane.showMessageDialog(null, "Selecciona un Producto");
+        } else {
+            int opc = JOptionPane.showConfirmDialog(this, "Estas seguro de modificar este Producto?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (opc == JOptionPane.YES_OPTION) {
+                
+            Producto modelo = new Producto();
+            CRUD_Producto crudProducto = new CRUD_Producto();
+            modificarProducto vistaModificar = new modificarProducto();
+            ControladorModificarProducto controlador = new ControladorModificarProducto(modelo,crudProducto,vistaModificar);
+            controlador.iniciar();
+            vistaModificar.setVisible(true);
+            vistaModificar.setLocationRelativeTo(null);
+            vistaModificar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            s = (Integer.parseInt(jTableProductos.getValueAt(row,0).toString()));
+            
+            
+            }
+        }
+    }//GEN-LAST:event_btn_modificarActionPerformed
 
     /**
      * @param args the command line arguments
