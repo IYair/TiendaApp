@@ -60,18 +60,17 @@ public class CRUD_Producto extends Conexion{
         }
     }
 
-    public boolean EditarProducto(Usuario usuario) {
+    public boolean EditarProducto(Producto producto) {
         CallableStatement ps = null;
         Connection con = getConexion();
-        String sql = "{call PA_UpdateUsuario(?,?,?,?,?,?)}";
+        String sql = "{call PA_UpdateProducto(?,?,?,?,?)}";
         try {
             ps = con.prepareCall(sql);
-            ps.setInt(1, usuario.getId());
-            ps.setString(2, usuario.getPassword());
-            ps.setString(3, usuario.getNombre());
-            ps.setString(4, usuario.getApellido());
-            ps.setString(5, usuario.getCorreo());
-            ps.setString(6, usuario.getDateborn());
+            ps.setInt(1, producto.getId());
+            ps.setString(2, producto.getNombre());
+            ps.setString(3, producto.getDescripcion());
+            ps.setString(4, producto.getCategoria());
+            ps.setDouble(5, producto.getPrecio());
             ps.execute();
             return true;
         } catch (SQLException ex) {
