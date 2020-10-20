@@ -1,9 +1,12 @@
 
 package Controlador;
 
+import Modelo.CRUD_Producto;
 import Modelo.CRUD_Usuario;
+import Modelo.Producto;
 import Modelo.Usuario;
 import Vista.F_Administrador;
+import Vista.Productos;
 import Vista.Usuarios;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,7 +43,12 @@ public class ControladorAdmInicio implements ActionListener{
             vistaUsuarios.setVisible(true);
         }
         if(e.getSource()== vistaAdmi.btn_Productos){
-            
+            Producto modelo = new Producto();
+            CRUD_Producto crudProducto = new CRUD_Producto();
+            Productos vistaProducto = new Productos();
+            ControladorAdmProducto controlador = new ControladorAdmProducto(vistaProducto, modelo, crudProducto);
+            controlador.iniciar();
+            vistaProducto.setVisible(true);
         }
     }
     
