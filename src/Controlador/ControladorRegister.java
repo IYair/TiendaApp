@@ -50,15 +50,7 @@ public class ControladorRegister implements ActionListener {
                 Limpiar();
             }
         }
-        if (e.getSource() == vistaUsuario.jButtonCancelar) {
-            Usuario modelo = new Usuario();
-            CRUD_Usuario crudUsuario = new CRUD_Usuario();
-            Login vistaLogin = new Login();
-            ControladorLogin controlador = new ControladorLogin(modelo, crudUsuario, vistaLogin);
-            controlador.iniciar();
-            vistaLogin.setVisible(true);
-            vistaLogin.setLocationRelativeTo(null);
-            vistaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        if (e.getSource() == vistaUsuario.jButtonCancelar) {         
         }
     }
 
