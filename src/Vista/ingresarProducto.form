@@ -36,7 +36,6 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel_Precio" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel_Categoria" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel_Id" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel_Nombre" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel_Descripcion" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -44,7 +43,6 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jTextField_Descripción" alignment="0" pref="199" max="32767" attributes="0"/>
                           <Component id="jTextField_Nombre" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextField_Id" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextField_Categoria" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextField_Precio" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -57,12 +55,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField_Id" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_Id" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextField_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -82,7 +75,7 @@
                   <Component id="jLabel_Precio" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jTextField_Precio" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="10" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton_Cancelar" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton_Guardar" min="-2" max="-2" attributes="0"/>
@@ -123,8 +116,14 @@
           <Color id="Cursor de Texto"/>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField_Nombre">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_Guardar">
       <Properties>
@@ -149,6 +148,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField_Descripci&#xf3;n">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_Cancelar">
       <Properties>
@@ -157,26 +159,17 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_CancelarActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField_Categoria">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel_Id">
-      <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Id"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_Id">
-      <Properties>
-        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Texto"/>
-        </Property>
-      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

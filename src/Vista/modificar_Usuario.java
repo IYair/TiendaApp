@@ -39,6 +39,8 @@ public class modificar_Usuario extends javax.swing.JFrame {
         jButton_modificar = new javax.swing.JButton();
         jLabel_contraseña = new javax.swing.JLabel();
         jButton_cancelar = new javax.swing.JButton();
+        jTextId = new javax.swing.JTextField();
+        jLabel_nombre1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +74,16 @@ public class modificar_Usuario extends javax.swing.JFrame {
             }
         });
 
+        jTextId.setEditable(false);
+        jTextId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextIdActionPerformed(evt);
+            }
+        });
+
+        jLabel_nombre1.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel_nombre1.setText("Id");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,27 +95,33 @@ public class modificar_Usuario extends javax.swing.JFrame {
                         .addComponent(jButton_modificar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton_cancelar))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel_fechaNacimiento)
                             .addComponent(jLabel_contraseña)
                             .addComponent(jLabel_nombre)
                             .addComponent(jLabel_apellido)
-                            .addComponent(jLabel_correo))
+                            .addComponent(jLabel_correo)
+                            .addComponent(jLabel_nombre1))
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField_correo, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                             .addComponent(jTextField_apellido)
                             .addComponent(jTextField_nombre)
                             .addComponent(jTextField_contraseña)
-                            .addComponent(jTextField_fechaNacimiento))))
+                            .addComponent(jTextField_fechaNacimiento)
+                            .addComponent(jTextId))))
                 .addGap(54, 54, 54))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(92, 92, 92)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_nombre1))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_nombre))
@@ -136,6 +154,10 @@ public class modificar_Usuario extends javax.swing.JFrame {
     private void jButton_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancelarActionPerformed
         dispose();
     }//GEN-LAST:event_jButton_cancelarActionPerformed
+
+    private void jTextIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextIdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,10 +202,12 @@ public class modificar_Usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_correo;
     private javax.swing.JLabel jLabel_fechaNacimiento;
     private javax.swing.JLabel jLabel_nombre;
-    private javax.swing.JTextField jTextField_apellido;
-    private javax.swing.JTextField jTextField_contraseña;
-    private javax.swing.JTextField jTextField_correo;
-    private javax.swing.JTextField jTextField_fechaNacimiento;
-    private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JLabel jLabel_nombre1;
+    public javax.swing.JTextField jTextField_apellido;
+    public javax.swing.JTextField jTextField_contraseña;
+    public javax.swing.JTextField jTextField_correo;
+    public javax.swing.JTextField jTextField_fechaNacimiento;
+    public javax.swing.JTextField jTextField_nombre;
+    public javax.swing.JTextField jTextId;
     // End of variables declaration//GEN-END:variables
 }

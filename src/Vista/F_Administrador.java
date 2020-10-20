@@ -292,7 +292,6 @@ public class F_Administrador extends javax.swing.JFrame {
             }//GEN-LAST:event_btn_ProductosActionPerformed
 
     private void btn_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_UsuariosActionPerformed
-        dispose();
     }//GEN-LAST:event_btn_UsuariosActionPerformed
 
     private void btn_ordenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ordenesActionPerformed
@@ -312,21 +311,14 @@ public class F_Administrador extends javax.swing.JFrame {
 
     private void btn_ProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ProductosMouseClicked
 
-        this.dispose();
 
     }//GEN-LAST:event_btn_ProductosMouseClicked
 
     private void btn_ordenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ordenesMouseClicked
 
-        this.dispose();
-
-
     }//GEN-LAST:event_btn_ordenesMouseClicked
 
     private void btn_domicilioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_domicilioMouseClicked
-
-        this.dispose();
-
 
     }//GEN-LAST:event_btn_domicilioMouseClicked
 

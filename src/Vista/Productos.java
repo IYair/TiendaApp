@@ -5,7 +5,10 @@
  */
 package Vista;
 
+import Modelo.CRUD_Producto;
+import Modelo.CRUD_Usuario;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,6 +61,11 @@ public class Productos extends javax.swing.JFrame {
 
         btn_eliminar.setText("Eliminar");
         btn_eliminar.setPreferredSize(new java.awt.Dimension(71, 23));
+        btn_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eliminarActionPerformed(evt);
+            }
+        });
 
         btn_modificar.setText("Modificar");
         btn_modificar.setPreferredSize(new java.awt.Dimension(71, 23));
@@ -72,6 +80,11 @@ public class Productos extends javax.swing.JFrame {
         btn_home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_homeMouseClicked(evt);
+            }
+        });
+        btn_home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_homeActionPerformed(evt);
             }
         });
 
@@ -137,15 +150,25 @@ public class Productos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseClicked
-F_Administrador home = new F_Administrador();
-        
-        home.setVisible(true);
-        home.pack();
-        home.setLocationRelativeTo(null);
-        home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
 
     }//GEN-LAST:event_btn_homeMouseClicked
+
+    private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
+        int row = jTableProductos.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(null, "Selecciona un Producto");
+        }else{
+        int opc = JOptionPane.showConfirmDialog(this,"Estas seguro de eliminar este Producto?","Pregunta",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+        if(opc == JOptionPane.YES_OPTION){
+            CRUD_Producto procedimiento = new CRUD_Producto();
+            procedimiento.EliminarProducto(Integer.parseInt(jTableProductos.getValueAt(row,0).toString()));
+        }
+        }
+    }//GEN-LAST:event_btn_eliminarActionPerformed
+
+    private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
+       dispose();
+    }//GEN-LAST:event_btn_homeActionPerformed
 
     /**
      * @param args the command line arguments
