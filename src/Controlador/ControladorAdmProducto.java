@@ -3,8 +3,10 @@ package Controlador;
 import Modelo.CRUD_Producto;
 import Modelo.Producto;
 import Vista.Productos;
+import Vista.ingresarProducto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 
 /**
  *
@@ -37,6 +39,17 @@ public class ControladorAdmProducto implements ActionListener{
     public void actionPerformed(ActionEvent e) {
     if(e.getSource()== vistaProductos.jButtonActualizar){
         mostrarTablaProductos();
+    }
+    if(e.getSource()==vistaProductos.btn_insertar){
+            Producto modelo = new Producto();
+            CRUD_Producto crudProducto = new CRUD_Producto();
+             ingresarProducto vistaProducto = new ingresarProducto();
+            ControladorRegisterProducto controlador = new ControladorRegisterProducto(modelo, crudProducto, vistaProducto);
+            controlador.iniciar();
+            vistaProducto.setVisible(true);
+            vistaProducto.setLocationRelativeTo(null);
+            vistaProducto.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
     }
     
