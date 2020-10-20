@@ -58,7 +58,7 @@ public class ControladorRegister implements ActionListener {
         vistaUsuario.jPasswordContraseña.setText(null);
         vistaUsuario.jTextNombre.setText(null);
         vistaUsuario.jTextApellido.setText(null);
-        vistaUsuario.jPasswordContraseña.setText(null);
+        vistaUsuario.jTextCorreo.setText(null);
         vistaUsuario.jTextDateborn.setText(null);
 
     }
