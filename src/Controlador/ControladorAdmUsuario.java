@@ -5,6 +5,7 @@ import Modelo.Usuario;
 import Vista.F_Administrador;
 import Vista.Register;
 import Vista.Usuarios;
+import Vista.modificar_Usuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -28,6 +29,7 @@ public class ControladorAdmUsuario implements ActionListener {
         
         this.vistaUsuarios.jButtonActualizar.addActionListener(this);
         this.vistaUsuarios.jButtonInsertar.addActionListener(this);
+        this.vistaUsuarios.btn_modificar.addActionListener(this);
     }
     public void iniciar(){
         vistaUsuarios.setTitle("Administracion de usuarios");
@@ -57,8 +59,15 @@ public class ControladorAdmUsuario implements ActionListener {
             vistaAdministrador.setLocationRelativeTo(null);
             vistaAdministrador.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         }
-        if (e.getSource() == vistaUsuarios.btn_eliminar) {
-            
+        if (e.getSource() == vistaUsuarios.btn_modificar) {
+            Usuario modelo = new Usuario();
+            CRUD_Usuario crudUsuario = new CRUD_Usuario();
+            modificar_Usuario vistaModificar = new modificar_Usuario();
+            ControladorModificar controlador = new ControladorModificar(modelo,crudUsuario,vistaModificar);
+            controlador.iniciar();
+            vistaModificar.setVisible(true);
+            vistaModificar.setLocationRelativeTo(null);
+            vistaModificar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         }
     }
 
